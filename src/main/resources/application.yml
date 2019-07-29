@@ -1,0 +1,25 @@
+spring:
+  application:
+    name: test-app
+  artemis:
+    user: artemis
+    password: simetraehcapa
+    url: tcp://localhost:61617
+    host:
+  jms:
+    listener:
+      acknowledge-mode: client
+  main:
+    lazy-initialization: true
+
+server:
+  port : 8016
+
+opentracing:
+  jaeger:
+    enabled: true
+    enable-b3-propagation: false
+    log-spans: false
+    udp-sender:
+      host: localhost
+      port: 6831
